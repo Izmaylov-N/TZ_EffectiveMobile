@@ -569,6 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2045768317}
   - component: {fileID: 2045768316}
+  - component: {fileID: 2045768319}
   - component: {fileID: 2045768315}
   - component: {fileID: 2045768318}
   m_Layer: 0
@@ -636,14 +637,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eccc41cbfb6fa140870e453ef71d5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  jumpForce: 12
-  groundCheckDistance: 0.1
-  groundLayerMask:
+  _moveSpeed: 5
+  _jumpForce: 8
+  _groundCheckDistance: 0.1
+  _groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  groundCheckPoint: {fileID: 1421052584}
-  isGrounded: 0
+  _groundCheckPoint: {fileID: 1421052584}
+  _rigidbody2D: {fileID: 2045768318}
 --- !u!4 &2045768317
 Transform:
   m_ObjectHideFlags: 0
@@ -688,6 +689,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2045768319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045768314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576d5221a0445e54ba5f5f241fb8f436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerController: {fileID: 2045768316}
+  _spriteRenderer: {fileID: 1419308491}
+  anim: {fileID: 1419308490}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
